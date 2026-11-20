@@ -1,0 +1,47 @@
+<!-- title: Min side – Norges Dartsforbund | page: member | nav: none | desc: Medlemskap, påmeldinger og medlemskort. -->
+<div class="page-head">
+  <div class="wrap">
+    <h1>Hei, <span id="m-name"></span></h1>
+    <p>Her styrer du medlemskapet ditt og påmeldingene dine.</p>
+  </div>
+</div>
+<section class="section">
+  <div class="wrap dash">
+    <div>
+      <section class="panel" aria-labelledby="mem-h">
+        <h2 id="mem-h">Medlemskap</h2>
+        <div class="status" id="m-status" aria-live="polite"></div>
+      </section>
+      <section class="panel" aria-labelledby="reg-h">
+        <div class="section-head" style="margin-bottom:.75rem"><h2 id="reg-h" style="margin:0">Mine påmeldinger</h2><a href="terminliste.html">Meld deg på flere</a></div>
+        <div id="m-regs" aria-live="polite"></div>
+      </section>
+      <section class="panel" aria-labelledby="prof-h">
+        <h2 id="prof-h">Profil</h2>
+        <dl id="m-profile" style="display:grid;grid-template-columns:auto 1fr;gap:.3rem 1.25rem;margin:0 0 1.25rem"></dl>
+        <button class="btn btn-secondary btn-small" type="button" id="logout">Logg ut</button>
+      </section>
+    </div>
+    <aside aria-labelledby="card-h">
+      <h2 id="card-h" class="visually-hidden">Digitalt medlemskort</h2>
+      <div class="member-card unpaid" id="m-card">
+        {{card_board}}
+        <span class="mc-top">Norges Dartsforbund</span>
+        <span class="mc-year">2027</span>
+        <span class="mc-name" id="m-card-name"></span>
+        <span class="mc-meta" id="m-card-meta"></span>
+        <span class="mc-meta" id="m-card-status"></span>
+      </div>
+      <p class="demo-flag" style="margin-top:.75rem">Vis kortet på mobilen ved innsjekk på turneringer.</p>
+    </aside>
+  </div>
+</section>
+<dialog id="pay-dialog" aria-labelledby="pay-h">
+  <h2 id="pay-h" style="font-size:1.4rem">Betal med <span class="vipps-mark">vipps</span></h2>
+  <p>Kontingent 2027, senior: <strong>800 kr</strong></p>
+  <p class="demo-flag">I en ferdig løsning åpnes Vipps her. Beløpet er basert på 2026-satsene. I konseptet trekkes ingen penger.</p>
+  <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+    <button class="btn btn-primary" id="pay-confirm" type="button">Bekreft betaling</button>
+    <button class="btn btn-secondary" id="pay-cancel" type="button">Avbryt</button>
+  </div>
+</dialog>

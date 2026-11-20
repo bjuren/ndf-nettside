@@ -1,0 +1,24 @@
+<!-- title: Terminliste 2027 – Norges Dartsforbund | page: calendar | nav: terminliste | desc: Alle nasjonale, internasjonale og kretsarrangementer i 2027. -->
+<div class="page-head">
+  <div class="wrap">
+    <h1>Terminliste 2027</h1>
+    <p>Mesterskap, rankingturneringer og kretsarrangementer. Meld deg på direkte, eller legg turneringen i kalenderen din.</p>
+  </div>
+</div>
+<div class="section" style="padding-top:0">
+  <div class="wrap">
+    <form class="filters" id="cal-filters" role="search" aria-label="Filtrer terminlisten">
+      <fieldset class="chips">
+        <legend>Nivå</legend>
+        <label class="chip"><input type="checkbox" name="level" value="nasjonal" checked><span>Nasjonal</span></label>
+        <label class="chip"><input type="checkbox" name="level" value="internasjonal" checked><span>Internasjonal</span></label>
+        <label class="chip"><input type="checkbox" name="level" value="krets" checked><span>Krets</span></label>
+      </fieldset>
+      <div class="field"><label for="cal-month">Måned</label><select id="cal-month"></select></div>
+      <div class="field"><label for="cal-q">Søk</label><input type="search" id="cal-q" placeholder="Sted eller turnering"></div>
+    </form>
+    <p class="result-count" id="cal-count" aria-live="polite"></p>
+    <div id="cal-list"></div>
+    <p class="demo-flag" style="margin-top:1.5rem">Eksempeldata. Datoene kan endres hvis WDF endrer sin terminliste.</p>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Min side – Norges Dartsforbund</title>
+<meta name="description" content="Medlemskap, påmeldinger og medlemskort.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#13203a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="member">
+<a class="skip-link" href="#main">Hopp til innholdet</a>
+<div class="concept-bar"><div class="wrap"><p><strong>Konsept.</strong> Dette er et forslag til ny nettside for Norges Dartsforbund. Innlogging og betaling er simulert, og felt merket som eksempeldata er ikke ekte.</p></div></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="-50 -50 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><circle r="48" fill="#fff"/><circle r="40" fill="#c8102e"/><circle r="32" fill="#fff"/><circle r="22" fill="#146b45"/><circle r="12" fill="#fff"/><circle r="6" fill="#c8102e"/></svg>
+      <span class="brand-name">Norges Dartsforbund<small>Darts for hele landet</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Meny</button>
+    <nav class="main-nav" id="main-nav" aria-label="Hovedmeny">
+      <ul>
+        <li><a href="terminliste.html">Terminliste</a></li>
+        <li><a href="resultater.html">Resultater</a></li>
+        <li><a href="rangering.html">Rangering</a></li>
+        <li><a href="klubber.html">Finn klubb</a></li>
+        <li><a href="bli-med.html">Bli med</a></li>
+        <li><a href="nyheter.html">Nyheter</a></li>
+        <li><a href="om-ndf.html">Om NDF</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions" id="auth-slot">
+      <a class="btn btn-light btn-small" href="logg-inn.html">Logg inn<span class="btn-label-long">&nbsp;på Min side</span></a>
+    </div>
+  </div>
+</header>
+<main id="main">
+<div class="page-head">
+  <div class="wrap">
+    <h1>Hei, <span id="m-name"></span></h1>
+    <p>Her styrer du medlemskapet ditt og påmeldingene dine.</p>
+  </div>
+</div>
+<section class="section">
+  <div class="wrap dash">
+    <div>
+      <section class="panel" aria-labelledby="mem-h">
+        <h2 id="mem-h">Medlemskap</h2>
+        <div class="status" id="m-status" aria-live="polite"></div>
+      </section>
+      <section class="panel" aria-labelledby="reg-h">
+        <div class="section-head" style="margin-bottom:.75rem"><h2 id="reg-h" style="margin:0">Mine påmeldinger</h2><a href="terminliste.html">Meld deg på flere</a></div>
+        <div id="m-regs" aria-live="polite"></div>
+      </section>
+      <section class="panel" aria-labelledby="prof-h">
+        <h2 id="prof-h">Profil</h2>
+        <dl id="m-profile" style="display:grid;grid-template-columns:auto 1fr;gap:.3rem 1.25rem;margin:0 0 1.25rem"></dl>
+        <button class="btn btn-secondary btn-small" type="button" id="logout">Logg ut</button>
+      </section>
+    </div>
+    <aside aria-labelledby="card-h">
+      <h2 id="card-h" class="visually-hidden">Digitalt medlemskort</h2>
+      <div class="member-card unpaid" id="m-card">
+        <svg viewBox="-176 -176 352 352" aria-hidden="true" class="mc-board" xmlns="http://www.w3.org/2000/svg"><circle r="176" fill="#000000"/><path fill="#000000" d="M-2.49 -15.70 L-15.49 -97.78 A99 99 0 0 1 15.49 -97.78 L2.49 -15.70 A15.9 15.9 0 0 0 -2.49 -15.70Z"/><path fill="#c8102e" d="M-15.49 -97.78 L-16.74 -105.68 A107 107 0 0 1 16.74 -105.68 L15.49 -97.78 A99 99 0 0 0 -15.49 -97.78Z"/><path fill="#000000" d="M-16.74 -105.68 L-25.34 -160.01 A162 162 0 0 1 25.34 -160.01 L16.74 -105.68 A107 107 0 0 0 -16.74 -105.68Z"/><path fill="#c8102e" d="M-25.34 -160.01 L-26.59 -167.91 A170 170 0 0 1 26.59 -167.91 L25.34 -160.01 A162 162 0 0 0 -25.34 -160.01Z"/><path fill="#e8dcc2" d="M2.49 -15.70 L15.49 -97.78 A99 99 0 0 1 44.95 -88.21 L7.22 -14.17 A15.9 15.9 0 0 0 2.49 -15.70Z"/><path fill="#146b45" d="M15.49 -97.78 L16.74 -105.68 A107 107 0 0 1 48.58 -95.34 L44.95 -88.21 A99 99 0 0 0 15.49 -97.78Z"/><path fill="#e8dcc2" d="M16.74 -105.68 L25.34 -160.01 A162 162 0 0 1 73.55 -144.34 L48.58 -95.34 A107 107 0 0 0 16.74 -105.68Z"/><path fill="#146b45" d="M25.34 -160.01 L26.59 -167.91 A170 170 0 0 1 77.18 -151.47 L73.55 -144.34 A162 162 0 0 0 25.34 -160.01Z"/><path fill="#000000" d="M7.22 -14.17 L44.95 -88.21 A99 99 0 0 1 70.00 -70.00 L11.24 -11.24 A15.9 15.9 0 0 0 7.22 -14.17Z"/><path fill="#c8102e" d="M44.95 -88.21 L48.58 -95.34 A107 107 0 0 1 75.66 -75.66 L70.00 -70.00 A99 99 0 0 0 44.95 -88.21Z"/><path fill="#000000" d="M48.58 -95.34 L73.55 -144.34 A162 162 0 0 1 114.55 -114.55 L75.66 -75.66 A107 107 0 0 0 48.58 -95.34Z"/><path fill="#c8102e" d="M73.55 -144.34 L77.18 -151.47 A170 170 0 0 1 120.21 -120.21 L114.55 -114.55 A162 162 0 0 0 73.55 -144.34Z"/><path fill="#e8dcc2" d="M11.24 -11.24 L70.00 -70.00 A99 99 0 0 1 88.21 -44.95 L14.17 -7.22 A15.9 15.9 0 0 0 11.24 -11.24Z"/><path fill="#146b45" d="M70.00 -70.00 L75.66 -75.66 A107 107 0 0 1 95.34 -48.58 L88.21 -44.95 A99 99 0 0 0 70.00 -70.00Z"/><path fill="#e8dcc2" d="M75.66 -75.66 L114.55 -114.55 A162 162 0 0 1 144.34 -73.55 L95.34 -48.58 A107 107 0 0 0 75.66 -75.66Z"/><path fill="#146b45" d="M114.55 -114.55 L120.21 -120.21 A170 170 0 0 1 151.47 -77.18 L144.34 -73.55 A162 162 0 0 0 114.55 -114.55Z"/><path fill="#000000" d="M14.17 -7.22 L88.21 -44.95 A99 99 0 0 1 97.78 -15.49 L15.70 -2.49 A15.9 15.9 0 0 0 14.17 -7.22Z"/><path fill="#c8102e" d="M88.21 -44.95 L95.34 -48.58 A107 107 0 0 1 105.68 -16.74 L97.78 -15.49 A99 99 0 0 0 88.21 -44.95Z"/><path fill="#000000" d="M95.34 -48.58 L144.34 -73.55 A162 162 0 0 1 160.01 -25.34 L105.68 -16.74 A107 107 0 0 0 95.34 -48.58Z"/><path fill="#c8102e" d="M144.34 -73.55 L151.47 -77.18 A170 170 0 0 1 167.91 -26.59 L160.01 -25.34 A162 162 0 0 0 144.34 -73.55Z"/><path fill="#e8dcc2" d="M15.70 -2.49 L97.78 -15.49 A99 99 0 0 1 97.78 15.49 L15.70 2.49 A15.9 15.9 0 0 0 15.70 -2.49Z"/><path fill="#146b45" d="M97.78 -15.49 L105.68 -16.74 A107 107 0 0 1 105.68 16.74 L97.78 15.49 A99 99 0 0 0 97.78 -15.49Z"/><path fill="#e8dcc2" d="M105.68 -16.74 L160.01 -25.34 A162 162 0 0 1 160.01 25.34 L105.68 16.74 A107 107 0 0 0 105.68 -16.74Z"/><path fill="#146b45" d="M160.01 -25.34 L167.91 -26.59 A170 170 0 0 1 167.91 26.59 L160.01 25.34 A162 162 0 0 0 160.01 -25.34Z"/><path fill="#000000" d="M15.70 2.49 L97.78 15.49 A99 99 0 0 1 88.21 44.95 L14.17 7.22 A15.9 15.9 0 0 0 15.70 2.49Z"/><path fill="#c8102e" d="M97.78 15.49 L105.68 16.74 A107 107 0 0 1 95.34 48.58 L88.21 44.95 A99 99 0 0 0 97.78 15.49Z"/><path fill="#000000" d="M105.68 16.74 L160.01 25.34 A162 162 0 0 1 144.34 73.55 L95.34 48.58 A107 107 0 0 0 105.68 16.74Z"/><path fill="#c8102e" d="M160.01 25.34 L167.91 26.59 A170 170 0 0 1 151.47 77.18 L144.34 73.55 A162 162 0 0 0 160.01 25.34Z"/><path fill="#e8dcc2" d="M14.17 7.22 L88.21 44.95 A99 99 0 0 1 70.00 70.00 L11.24 11.24 A15.9 15.9 0 0 0 14.17 7.22Z"/><path fill="#146b45" d="M88.21 44.95 L95.34 48.58 A107 107 0 0 1 75.66 75.66 L70.00 70.00 A99 99 0 0 0 88.21 44.95Z"/><path fill="#e8dcc2" d="M95.34 48.58 L144.34 73.55 A162 162 0 0 1 114.55 114.55 L75.66 75.66 A107 107 0 0 0 95.34 48.58Z"/><path fill="#146b45" d="M144.34 73.55 L151.47 77.18 A170 170 0 0 1 120.21 120.21 L114.55 114.55 A162 162 0 0 0 144.34 73.55Z"/><path fill="#000000" d="M11.24 11.24 L70.00 70.00 A99 99 0 0 1 44.95 88.21 L7.22 14.17 A15.9 15.9 0 0 0 11.24 11.24Z"/><path fill="#c8102e" d="M70.00 70.00 L75.66 75.66 A107 107 0 0 1 48.58 95.34 L44.95 88.21 A99 99 0 0 0 70.00 70.00Z"/><path fill="#000000" d="M75.66 75.66 L114.55 114.55 A162 162 0 0 1 73.55 144.34 L48.58 95.34 A107 107 0 0 0 75.66 75.66Z"/><path fill="#c8102e" d="M114.55 114.55 L120.21 120.21 A170 170 0 0 1 77.18 151.47 L73.55 144.34 A162 162 0 0 0 114.55 114.55Z"/><path fill="#e8dcc2" d="M7.22 14.17 L44.95 88.21 A99 99 0 0 1 15.49 97.78 L2.49 15.70 A15.9 15.9 0 0 0 7.22 14.17Z"/><path fill="#146b45" d="M44.95 88.21 L48.58 95.34 A107 107 0 0 1 16.74 105.68 L15.49 97.78 A99 99 0 0 0 44.95 88.21Z"/><path fill="#e8dcc2" d="M48.58 95.34 L73.55 144.34 A162 162 0 0 1 25.34 160.01 L16.74 105.68 A107 107 0 0 0 48.58 95.34Z"/><path fill="#146b45" d="M73.55 144.34 L77.18 151.47 A170 170 0 0 1 26.59 167.91 L25.34 160.01 A162 162 0 0 0 73.55 144.34Z"/><path fill="#000000" d="M2.49 15.70 L15.49 97.78 A99 99 0 0 1 -15.49 97.78 L-2.49 15.70 A15.9 15.9 0 0 0 2.49 15.70Z"/><path fill="#c8102e" d="M15.49 97.78 L16.74 105.68 A107 107 0 0 1 -16.74 105.68 L-15.49 97.78 A99 99 0 0 0 15.49 97.78Z"/><path fill="#000000" d="M16.74 105.68 L25.34 160.01 A162 162 0 0 1 -25.34 160.01 L-16.74 105.68 A107 107 0 0 0 16.74 105.68Z"/><path fill="#c8102e" d="M25.34 160.01 L26.59 167.91 A170 170 0 0 1 -26.59 167.91 L-25.34 160.01 A162 162 0 0 0 25.34 160.01Z"/><path fill="#e8dcc2" d="M-2.49 15.70 L-15.49 97.78 A99 99 0 0 1 -44.95 88.21 L-7.22 14.17 A15.9 15.9 0 0 0 -2.49 15.70Z"/><path fill="#146b45" d="M-15.49 97.78 L-16.74 105.68 A107 107 0 0 1 -48.58 95.34 L-44.95 88.21 A99 99 0 0 0 -15.49 97.78Z"/><path fill="#e8dcc2" d="M-16.74 105.68 L-25.34 160.01 A162 162 0 0 1 -73.55 144.34 L-48.58 95.34 A107 107 0 0 0 -16.74 105.68Z"/><path fill="#146b45" d="M-25.34 160.01 L-26.59 167.91 A170 170 0 0 1 -77.18 151.47 L-73.55 144.34 A162 162 0 0 0 -25.34 160.01Z"/><path fill="#000000" d="M-7.22 14.17 L-44.95 88.21 A99 99 0 0 1 -70.00 70.00 L-11.24 11.24 A15.9 15.9 0 0 0 -7.22 14.17Z"/><path fill="#c8102e" d="M-44.95 88.21 L-48.58 95.34 A107 107 0 0 1 -75.66 75.66 L-70.00 70.00 A99 99 0 0 0 -44.95 88.21Z"/><path fill="#000000" d="M-48.58 95.34 L-73.55 144.34 A162 162 0 0 1 -114.55 114.55 L-75.66 75.66 A107 107 0 0 0 -48.58 95.34Z"/><path fill="#c8102e" d="M-73.55 144.34 L-77.18 151.47 A170 170 0 0 1 -120.21 120.21 L-114.55 114.55 A162 162 0 0 0 -73.55 144.34Z"/><path fill="#e8dcc2" d="M-11.24 11.24 L-70.00 70.00 A99 99 0 0 1 -88.21 44.95 L-14.17 7.22 A15.9 15.9 0 0 0 -11.24 11.24Z"/><path fill="#146b45" d="M-70.00 70.00 L-75.66 75.66 A107 107 0 0 1 -95.34 48.58 L-88.21 44.95 A99 99 0 0 0 -70.00 70.00Z"/><path fill="#e8dcc2" d="M-75.66 75.66 L-114.55 114.55 A162 162 0 0 1 -144.34 73.55 L-95.34 48.58 A107 107 0 0 0 -75.66 75.66Z"/><path fill="#146b45" d="M-114.55 114.55 L-120.21 120.21 A170 170 0 0 1 -151.47 77.18 L-144.34 73.55 A162 162 0 0 0 -114.55 114.55Z"/><path fill="#000000" d="M-14.17 7.22 L-88.21 44.95 A99 99 0 0 1 -97.78 15.49 L-15.70 2.49 A15.9 15.9 0 0 0 -14.17 7.22Z"/><path fill="#c8102e" d="M-88.21 44.95 L-95.34 48.58 A107 107 0 0 1 -105.68 16.74 L-97.78 15.49 A99 99 0 0 0 -88.21 44.95Z"/><path fill="#000000" d="M-95.34 48.58 L-144.34 73.55 A162 162 0 0 1 -160.01 25.34 L-105.68 16.74 A107 107 0 0 0 -95.34 48.58Z"/><path fill="#c8102e" d="M-144.34 73.55 L-151.47 77.18 A170 170 0 0 1 -167.91 26.59 L-160.01 25.34 A162 162 0 0 0 -144.34 73.55Z"/><path fill="#e8dcc2" d="M-15.70 2.49 L-97.78 15.49 A99 99 0 0 1 -97.78 -15.49 L-15.70 -2.49 A15.9 15.9 0 0 0 -15.70 2.49Z"/><path fill="#146b45" d="M-97.78 15.49 L-105.68 16.74 A107 107 0 0 1 -105.68 -16.74 L-97.78 -15.49 A99 99 0 0 0 -97.78 15.49Z"/><path fill="#e8dcc2" d="M-105.68 16.74 L-160.01 25.34 A162 162 0 0 1 -160.01 -25.34 L-105.68 -16.74 A107 107 0 0 0 -105.68 16.74Z"/><path fill="#146b45" d="M-160.01 25.34 L-167.91 26.59 A170 170 0 0 1 -167.91 -26.59 L-160.01 -25.34 A162 162 0 0 0 -160.01 25.34Z"/><path fill="#000000" d="M-15.70 -2.49 L-97.78 -15.49 A99 99 0 0 1 -88.21 -44.95 L-14.17 -7.22 A15.9 15.9 0 0 0 -15.70 -2.49Z"/><path fill="#c8102e" d="M-97.78 -15.49 L-105.68 -16.74 A107 107 0 0 1 -95.34 -48.58 L-88.21 -44.95 A99 99 0 0 0 -97.78 -15.49Z"/><path fill="#000000" d="M-105.68 -16.74 L-160.01 -25.34 A162 162 0 0 1 -144.34 -73.55 L-95.34 -48.58 A107 107 0 0 0 -105.68 -16.74Z"/><path fill="#c8102e" d="M-160.01 -25.34 L-167.91 -26.59 A170 170 0 0 1 -151.47 -77.18 L-144.34 -73.55 A162 162 0 0 0 -160.01 -25.34Z"/><path fill="#e8dcc2" d="M-14.17 -7.22 L-88.21 -44.95 A99 99 0 0 1 -70.00 -70.00 L-11.24 -11.24 A15.9 15.9 0 0 0 -14.17 -7.22Z"/><path fill="#146b45" d="M-88.21 -44.95 L-95.34 -48.58 A107 107 0 0 1 -75.66 -75.66 L-70.00 -70.00 A99 99 0 0 0 -88.21 -44.95Z"/><path fill="#e8dcc2" d="M-95.34 -48.58 L-144.34 -73.55 A162 162 0 0 1 -114.55 -114.55 L-75.66 -75.66 A107 107 0 0 0 -95.34 -48.58Z"/><path fill="#146b45" d="M-144.34 -73.55 L-151.47 -77.18 A170 170 0 0 1 -120.21 -120.21 L-114.55 -114.55 A162 162 0 0 0 -144.34 -73.55Z"/><path fill="#000000" d="M-11.24 -11.24 L-70.00 -70.00 A99 99 0 0 1 -44.95 -88.21 L-7.22 -14.17 A15.9 15.9 0 0 0 -11.24 -11.24Z"/><path fill="#c8102e" d="M-70.00 -70.00 L-75.66 -75.66 A107 107 0 0 1 -48.58 -95.34 L-44.95 -88.21 A99 99 0 0 0 -70.00 -70.00Z"/><path fill="#000000" d="M-75.66 -75.66 L-114.55 -114.55 A162 162 0 0 1 -73.55 -144.34 L-48.58 -95.34 A107 107 0 0 0 -75.66 -75.66Z"/><path fill="#c8102e" d="M-114.55 -114.55 L-120.21 -120.21 A170 170 0 0 1 -77.18 -151.47 L-73.55 -144.34 A162 162 0 0 0 -114.55 -114.55Z"/><path fill="#e8dcc2" d="M-7.22 -14.17 L-44.95 -88.21 A99 99 0 0 1 -15.49 -97.78 L-2.49 -15.70 A15.9 15.9 0 0 0 -7.22 -14.17Z"/><path fill="#146b45" d="M-44.95 -88.21 L-48.58 -95.34 A107 107 0 0 1 -16.74 -105.68 L-15.49 -97.78 A99 99 0 0 0 -44.95 -88.21Z"/><path fill="#e8dcc2" d="M-48.58 -95.34 L-73.55 -144.34 A162 162 0 0 1 -25.34 -160.01 L-16.74 -105.68 A107 107 0 0 0 -48.58 -95.34Z"/><path fill="#146b45" d="M-73.55 -144.34 L-77.18 -151.47 A170 170 0 0 1 -26.59 -167.91 L-25.34 -160.01 A162 162 0 0 0 -73.55 -144.34Z"/><circle r="15.9" fill="none" stroke="#b9b2a2" stroke-width="0.8"/><circle r="99" fill="none" stroke="#b9b2a2" stroke-width="0.8"/><circle r="107" fill="none" stroke="#b9b2a2" stroke-width="0.8"/><circle r="162" fill="none" stroke="#b9b2a2" stroke-width="0.8"/><circle r="170" fill="none" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-2.49" y1="-15.70" x2="-26.59" y2="-167.91" stroke="#b9b2a2" stroke-width="0.8"/><line x1="2.49" y1="-15.70" x2="26.59" y2="-167.91" stroke="#b9b2a2" stroke-width="0.8"/><line x1="7.22" y1="-14.17" x2="77.18" y2="-151.47" stroke="#b9b2a2" stroke-width="0.8"/><line x1="11.24" y1="-11.24" x2="120.21" y2="-120.21" stroke="#b9b2a2" stroke-width="0.8"/><line x1="14.17" y1="-7.22" x2="151.47" y2="-77.18" stroke="#b9b2a2" stroke-width="0.8"/><line x1="15.70" y1="-2.49" x2="167.91" y2="-26.59" stroke="#b9b2a2" stroke-width="0.8"/><line x1="15.70" y1="2.49" x2="167.91" y2="26.59" stroke="#b9b2a2" stroke-width="0.8"/><line x1="14.17" y1="7.22" x2="151.47" y2="77.18" stroke="#b9b2a2" stroke-width="0.8"/><line x1="11.24" y1="11.24" x2="120.21" y2="120.21" stroke="#b9b2a2" stroke-width="0.8"/><line x1="7.22" y1="14.17" x2="77.18" y2="151.47" stroke="#b9b2a2" stroke-width="0.8"/><line x1="2.49" y1="15.70" x2="26.59" y2="167.91" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-2.49" y1="15.70" x2="-26.59" y2="167.91" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-7.22" y1="14.17" x2="-77.18" y2="151.47" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-11.24" y1="11.24" x2="-120.21" y2="120.21" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-14.17" y1="7.22" x2="-151.47" y2="77.18" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-15.70" y1="2.49" x2="-167.91" y2="26.59" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-15.70" y1="-2.49" x2="-167.91" y2="-26.59" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-14.17" y1="-7.22" x2="-151.47" y2="-77.18" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-11.24" y1="-11.24" x2="-120.21" y2="-120.21" stroke="#b9b2a2" stroke-width="0.8"/><line x1="-7.22" y1="-14.17" x2="-77.18" y2="-151.47" stroke="#b9b2a2" stroke-width="0.8"/><circle r="15.9" fill="#146b45" stroke="#b9b2a2" stroke-width="0.8"/><circle r="6.35" fill="#c8102e"/></svg>
+        <span class="mc-top">Norges Dartsforbund</span>
+        <span class="mc-year">2027</span>
+        <span class="mc-name" id="m-card-name"></span>
+        <span class="mc-meta" id="m-card-meta"></span>
+        <span class="mc-meta" id="m-card-status"></span>
+      </div>
+      <p class="demo-flag" style="margin-top:.75rem">Vis kortet på mobilen ved innsjekk på turneringer.</p>
+    </aside>
+  </div>
+</section>
+<dialog id="pay-dialog" aria-labelledby="pay-h">
+  <h2 id="pay-h" style="font-size:1.4rem">Betal med <span class="vipps-mark">vipps</span></h2>
+  <p>Kontingent 2027, senior: <strong>800 kr</strong></p>
+  <p class="demo-flag">I en ferdig løsning åpnes Vipps her. Beløpet er basert på 2026-satsene. I konseptet trekkes ingen penger.</p>
+  <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+    <button class="btn btn-primary" id="pay-confirm" type="button">Bekreft betaling</button>
+    <button class="btn btn-secondary" id="pay-cancel" type="button">Avbryt</button>
+  </div>
+</dialog>
+</main>
+<section class="sponsors" aria-labelledby="sponsors-h">
+  <div class="wrap">
+    <h2 id="sponsors-h">Samarbeidspartnere</h2>
+    <ul>
+      <li><a href="https://www.strawberry.no/">Strawberry</a></li>
+      <li><a href="https://dartbutikk.no/">Dartbutikk</a></li>
+      <li><a href="http://www.dartsupply.no">Dartsupply</a></li>
+      <li><a href="https://superdarts.no/">Superdarts</a></li>
+    </ul>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Norges Dartsforbund</h2>
+        <p>Bergliveien 12<br>1458 Fjellstrand</p>
+        <p><a href="tel:+4792835795">+47 928 35 795</a><br><a href="mailto:president@darts.no">president@darts.no</a></p>
+      </div>
+      <div>
+        <h2>Spill</h2>
+        <ul>
+          <li><a href="terminliste.html">Terminliste</a></li>
+          <li><a href="resultater.html">Resultater</a></li>
+          <li><a href="rangering.html">Rangering</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Bli med</h2>
+        <ul>
+          <li><a href="klubber.html">Finn en klubb</a></li>
+          <li><a href="bli-med.html">Medlemskap og kontingent</a></li>
+          <li><a href="logg-inn.html">Min side</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Forbundet</h2>
+        <ul>
+          <li><a href="om-ndf.html">Om NDF</a></li>
+          <li><a href="om-ndf.html#dokumenter">Lover og skjema</a></li>
+          <li><a href="om-ndf.html#antidoping">Antidoping</a></li>
+          <li><a href="https://www.facebook.com/dartsndf/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Konseptforslag, november 2026</span>
+      <a href="kontakt.html">Kontakt NDF</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

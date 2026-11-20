@@ -1,0 +1,23 @@
+<!-- title: Finn en klubb – Norges Dartsforbund | page: clubs | nav: klubber | desc: Finn en dartklubb nær deg. -->
+<div class="page-head">
+  <div class="wrap">
+    <h1>Finn en klubb</h1>
+    <p>Alle som spiller i NDF er medlem gjennom en klubb. Finn en i nærheten og se når de spiller.</p>
+  </div>
+</div>
+<div class="section" style="padding-top:0">
+  <div class="wrap">
+    <form class="filters" role="search" aria-label="Søk etter klubb" onsubmit="return false">
+      <div class="field"><label for="club-q">Sted eller klubbnavn</label><input type="search" id="club-q"></div>
+      <div class="field"><label for="club-krets">Krets</label><select id="club-krets"></select></div>
+      <fieldset class="chips">
+        <legend>Vis bare klubber som</legend>
+        <label class="chip"><input type="checkbox" id="club-new"><span>Tar imot nybegynnere</span></label>
+        <label class="chip"><input type="checkbox" id="club-jr"><span>Har juniorgruppe</span></label>
+      </fieldset>
+    </form>
+    <p class="result-count" id="club-count" aria-live="polite"></p>
+    <div id="club-out"></div>
+    <p class="demo-flag" style="margin-top:1.5rem">Eksempeldata. Klubbene er oppdiktet og hentes fra medlemsregisteret i en ferdig løsning.</p>
+  </div>
+</div>

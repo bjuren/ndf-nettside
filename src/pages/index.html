@@ -1,0 +1,71 @@
+<!-- title: Norges Dartsforbund | page: home | nav: index | desc: Terminliste, resultater, rangering og klubber for darts i Norge. -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-h">Darts i hele Norge, fra klubbkvelden til NM.</h1>
+      <p class="hero-lead">Finn en klubb nær deg, meld deg på turneringer og følg resultatene fra norske mesterskap.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="klubber.html">Finn en klubb</a>
+        <a class="btn btn-ghost-light" href="terminliste.html">Se terminlisten</a>
+      </div>
+    </div>
+    <div class="board-stage">{{board}}</div>
+  </div>
+</section>
+<div class="hero-bottom">
+  <div class="wrap">
+    <section class="next-event" aria-labelledby="next-h">
+      <div>
+        <p class="kicker">Neste norgesmesterskap</p>
+        <h2 id="next-h" data-next-name>NM</h2>
+        <p data-next-meta></p>
+        <p style="margin-top:.6rem"><a data-next-link href="terminliste.html">Se detaljer og meld deg på</a></p>
+      </div>
+      <div class="countdown" data-countdown aria-label="Tid til start"></div>
+    </section>
+  </div>
+</div>
+
+<section class="section" aria-labelledby="news-h">
+  <div class="wrap split">
+    <div>
+      <div class="section-head"><h2 id="news-h">Nyheter</h2><a href="nyheter.html">Alle nyheter</a></div>
+      <ul class="news-list" id="home-news"></ul>
+    </div>
+    <div>
+      <div class="section-head"><h2 id="upc-h">Kommende turneringer</h2><a href="terminliste.html">Hele terminlisten</a></div>
+      <ul class="event-list compact" id="home-events" aria-labelledby="upc-h"></ul>
+      <p class="demo-flag" style="margin-top:.75rem">Eksempeldata. Hentes fra terminlisten for 2027.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-mist" aria-labelledby="rank-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="rank-h">Norgesrankingen</h2>
+      <p>Rankingen oppdateres automatisk etter hver rankingturnering, så du alltid ser hvem som leder an i herreklassen, dameklassen og juniorklassen.</p>
+      <p><a class="btn btn-secondary" href="rangering.html">Se hele rankingen</a></p>
+      <p class="demo-flag">Navnene er oppdiktet eksempeldata.</p>
+    </div>
+    <div class="tabs" id="home-ranking-tabs">
+      <div role="tablist" aria-label="Klasse">
+        <button role="tab" aria-selected="true" aria-controls="home-ranking" data-key="herrer">Herrer</button>
+        <button role="tab" aria-selected="false" aria-controls="home-ranking" data-key="damer" tabindex="-1">Damer</button>
+        <button role="tab" aria-selected="false" aria-controls="home-ranking" data-key="junior" tabindex="-1">Junior</button>
+      </div>
+      <div role="tabpanel" id="home-ranking" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="start-h">Kom i gang med darts</h2><a href="bli-med.html">Alt om medlemskap</a></div>
+    <ol class="steps">
+      <li><h3>Finn en klubb</h3><p>Alle medlemmer i NDF er med gjennom en klubb. Søk etter klubber i ditt fylke og se når de har spillekvelder.</p></li>
+      <li><h3>Kom på en spillekveld</h3><p>De fleste klubbene har piler du kan låne. Ta kontakt på forhånd, så blir du tatt godt imot.</p></li>
+      <li><h3>Bli medlem og spill</h3><p>Klubben melder deg inn. Deretter betaler du kontingenten på Min side og kan melde deg på turneringer.</p></li>
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<!-- title: Logg inn – Norges Dartsforbund | page: login | nav: none | desc: Logg inn på Min side. -->
+<section class="section">
+  <div class="wrap">
+    <div class="auth">
+      <h1>Logg inn på Min side</h1>
+      <p>Betal kontingent, meld deg på turneringer og se medlemskortet ditt.</p>
+      <div class="note"><p><strong>Prototype:</strong> innloggingen er simulert i nettleseren. Ingenting du skriver sendes eller lagres. Bruk hvilke som helst verdier.</p></div>
+      <button class="btn btn-secondary btn-block" type="button" data-sso="bankid">Logg inn med BankID</button>
+      <button class="btn btn-secondary btn-block" type="button" data-sso="vipps" style="margin-top:.6rem"><span class="vipps-mark">vipps</span> Logg inn med Vipps</button>
+      <p class="divider">eller</p>
+      <form id="login-form" novalidate>
+        <div class="field"><label for="l-id">E-post eller medlemsnummer</label><input type="text" id="l-id" autocomplete="off"></div>
+        <div class="field"><label for="l-pw">Passord</label><input type="password" id="l-pw" autocomplete="off"></div>
+        <p class="form-error" id="l-error" role="alert"></p>
+        <button class="btn btn-primary btn-block" type="submit">Logg inn</button>
+      </form>
+      <p style="margin-top:1rem"><a href="kontakt.html">Glemt passord eller ikke registrert?</a></p>
+    </div>
+  </div>
+</section>
